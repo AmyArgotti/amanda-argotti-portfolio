@@ -23,11 +23,16 @@
         <span>Amanda Argotti</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="language-switcher" aria-label="Language selector">
+        <button class="lang-option active" type="button" data-lang="en">EN</button>
+        <button class="lang-option" type="button" data-lang="es">ES</button>
+        <button class="lang-option" type="button" data-lang="ru">RU</button>
+      </div>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
         <span aria-hidden="true">◐</span>
       </button>
@@ -40,31 +45,31 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow">Software Engineering Student · AI Developer · Multilingual Builder</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Software Engineering Student · AI Developer · Multilingual Builder</p>
           <h1 id="hero-title">Amanda Argotti</h1>
-          <p class="hero-lede">
+          <p class="hero-lede" data-i18n="hero.lede">
             I build practical AI-powered educational systems with LLMs, RAG, NLP, and Python backend
             architecture, with a focus on language learning and human-centered AI.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="assets/documents/Amanda_Argotti_CV.pdf">Resume PDF</a>
+            <a class="button primary" href="#projects" data-i18n="hero.projects">View Projects</a>
+            <a class="button secondary" href="assets/documents/Amanda_Argotti_CV.pdf" data-i18n="hero.resume">Resume PDF</a>
           </div>
           <div class="hero-facts" aria-label="Profile highlights">
             <span>Kazan, Russia / Ecuador</span>
-            <span>Spanish · English · Russian</span>
-            <span>Open to jobs, internships, and scholarships</span>
+            <span data-i18n="hero.languages">Spanish · English · Russian</span>
+            <span data-i18n="hero.open">Open to jobs, internships, and scholarships</span>
           </div>
         </div>
       </section>
 
       <section class="intro-section section-grid" aria-labelledby="profile-title">
         <div>
-          <p class="section-kicker">Profile</p>
-          <h2 id="profile-title">A technical CV with an academic signal.</h2>
+          <p class="section-kicker" data-i18n="profile.kicker">Profile</p>
+          <h2 id="profile-title" data-i18n="profile.title">A technical CV with an academic signal.</h2>
         </div>
         <div class="intro-copy">
-          <p>
+          <p data-i18n="profile.copy">
             I am a Software Engineering student at Kazan Federal University working at the intersection
             of AI, software systems, and education. My strongest application angle is multilingual AI:
             building systems that can explain, adapt, speak, remember, and support learning across
@@ -90,7 +95,7 @@
       <section class="fit-band" aria-label="Application positioning">
         <div class="fit-copy">
           <span class="section-kicker">Positioning</span>
-          <p>
+          <p data-i18n="fit.copy">
             Multilingual software engineer building practical AI-powered educational systems using LLMs,
             NLP, and personalized learning architectures.
           </p>
@@ -106,17 +111,17 @@
 
       <section class="section-shell" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
-          <p class="section-kicker">Selected Work</p>
-          <h2 id="projects-title">Projects built around real learning problems.</h2>
+          <p class="section-kicker" data-i18n="projects.kicker">Selected Work</p>
+          <h2 id="projects-title" data-i18n="projects.title">Projects built around real learning problems.</h2>
         </div>
 
         <div class="project-controls" aria-label="Project filter">
-          <button type="button" class="chip active" data-filter="all">All</button>
+          <button type="button" class="chip active" data-filter="all" data-i18n="filter.all">All</button>
           <button type="button" class="chip" data-filter="ai">AI</button>
-          <button type="button" class="chip" data-filter="backend">Backend</button>
-          <button type="button" class="chip" data-filter="mobile">Mobile</button>
-          <button type="button" class="chip" data-filter="academic">Academic</button>
-          <button type="button" class="chip" data-filter="teaching">Teaching</button>
+          <button type="button" class="chip" data-filter="backend" data-i18n="filter.backend">Backend</button>
+          <button type="button" class="chip" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
+          <button type="button" class="chip" data-filter="academic" data-i18n="filter.academic">Academic</button>
+          <button type="button" class="chip" data-filter="teaching" data-i18n="filter.teaching">Teaching</button>
         </div>
 
         <div class="project-grid">
@@ -125,8 +130,8 @@
               <span>Diploma Project · 2025-2026</span>
               <span>Flagship</span>
             </div>
-            <h3>Juanito — AI Assistant for Learning Spanish</h3>
-            <p>
+            <h3 data-i18n="juanito.title">Juanito — AI Assistant for Learning Spanish</h3>
+            <p data-i18n="juanito.copy">
               An intelligent Spanish-learning assistant for Russian-speaking users, integrating local
               LLM inference, contextual translation, personalized vocabulary, quizzes, speech practice,
               reminders, progress tracking, and RAG-based adaptation.
@@ -140,9 +145,9 @@
               <span>Telegram Bot API</span>
             </div>
             <div class="project-links">
-              <button class="text-button" type="button" data-project-open="juanito">Explore architecture</button>
+              <button class="text-button" type="button" data-project-open="juanito" data-i18n="projects.architecture">Explore architecture</button>
               <a class="text-button" href="https://github.com/AmyArgotti/juanito-spanish-assistant" target="_blank" rel="noreferrer">
-                GitHub repository
+                <span data-i18n="projects.github">GitHub repository</span>
               </a>
             </div>
           </article>
@@ -152,8 +157,8 @@
               <span>GitHub · 2026</span>
               <span>Mobile App</span>
             </div>
-            <h3>Expense Tracker — Flutter Finance App</h3>
-            <p>
+            <h3 data-i18n="expense.title">Expense Tracker — Flutter Finance App</h3>
+            <p data-i18n="expense.copy">
               A Flutter mobile application for tracking income and expenses with SQLite persistence,
               MVVM architecture, adaptive navigation, receipt photos, geolocation, notifications,
               biometric protection, and a service-style sync demo.
@@ -167,7 +172,7 @@
             </div>
             <div class="project-links">
               <a class="text-button" href="https://github.com/AmyArgotti/expense-tracker-app" target="_blank" rel="noreferrer">
-                GitHub repository
+                <span data-i18n="projects.github">GitHub repository</span>
               </a>
             </div>
           </article>
@@ -177,8 +182,8 @@
               <span>Freelance Project</span>
               <span>Business Logic</span>
             </div>
-            <h3>Restaurant Loyalty System</h3>
-            <p>
+            <h3 data-i18n="loyalty.title">Restaurant Loyalty System</h3>
+            <p data-i18n="loyalty.copy">
               Digital loyalty management system for customer tracking, point management, data workflows,
               and backend business logic.
             </p>
@@ -194,8 +199,8 @@
               <span>Academic GitHub Work · 2022-2024</span>
               <span>Software Foundations</span>
             </div>
-            <h3>Java, Vue & Web Engineering Coursework</h3>
-            <p>
+            <h3 data-i18n="coursework.title">Java, Vue & Web Engineering Coursework</h3>
+            <p data-i18n="coursework.copy">
               Public academic repositories showing steady software engineering practice across Java
               labs, calculator implementations, semester projects, Vue work, HTML/CSS exercises, and
               JavaScript project files.
@@ -208,7 +213,7 @@
             </div>
             <div class="project-links">
               <a class="text-button" href="https://github.com/AmyArgotti?tab=repositories" target="_blank" rel="noreferrer">
-                View repositories
+                <span data-i18n="projects.repos">View repositories</span>
               </a>
             </div>
           </article>
@@ -218,8 +223,8 @@
               <span>Freelance / Academic Support</span>
               <span>Mentoring</span>
             </div>
-            <h3>Informatics Tutoring & Technical Assistance</h3>
-            <p>
+            <h3 data-i18n="tutoring.title">Informatics Tutoring & Technical Assistance</h3>
+            <p data-i18n="tutoring.copy">
               Technical support and programming assistance for university-level informatics, Python,
               databases, algorithms, debugging, and software development exercises.
             </p>
@@ -234,42 +239,42 @@
 
         <div class="github-proof" aria-label="GitHub portfolio summary">
           <div>
-            <p class="section-kicker">GitHub Signal</p>
-            <h3>Public work shows AI, mobile, backend, and academic growth.</h3>
+            <p class="section-kicker" data-i18n="github.kicker">GitHub Signal</p>
+            <h3 data-i18n="github.title">Public work shows AI, mobile, backend, and academic growth.</h3>
           </div>
           <div class="github-stats">
-            <span>15 public repositories</span>
+            <span data-i18n="github.repos">15 public repositories</span>
             <span>Python · Dart · Java · Vue · JavaScript</span>
-            <span>Most recent public work: March 2026</span>
+            <span data-i18n="github.recent">Most recent public work: March 2026</span>
           </div>
-          <a class="button primary" href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer">Open GitHub</a>
+          <a class="button primary" href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer" data-i18n="github.open">Open GitHub</a>
         </div>
       </section>
 
       <section class="section-shell two-column" id="skills" aria-labelledby="skills-title">
         <div class="section-heading sticky-heading">
-          <p class="section-kicker">Technical Skills</p>
-          <h2 id="skills-title">Modern AI work, grounded in software engineering.</h2>
-          <p>
+          <p class="section-kicker" data-i18n="skills.kicker">Technical Skills</p>
+          <h2 id="skills-title" data-i18n="skills.title">Modern AI work, grounded in software engineering.</h2>
+          <p data-i18n="skills.copy">
             The site highlights both research direction and implementation ability: important for jobs,
             internships, scholarships, and master's applications.
           </p>
         </div>
         <div class="skill-board">
           <article>
-            <h3>Programming</h3>
+            <h3 data-i18n="skills.programming">Programming</h3>
             <p>Python, SQL, Java, Go, JavaScript</p>
           </article>
           <article>
-            <h3>AI / ML</h3>
+            <h3 data-i18n="skills.ai">AI / ML</h3>
             <p>LLMs, prompt engineering, RAG, Ollama, Whisper STT, NLP applications</p>
           </article>
           <article>
-            <h3>Backend</h3>
+            <h3 data-i18n="skills.backend">Backend</h3>
             <p>REST APIs, client-server architecture, SQLite, JSON storage, database design</p>
           </article>
           <article>
-            <h3>Tools</h3>
+            <h3 data-i18n="skills.tools">Tools</h3>
             <p>Git, GitHub, Linux/macOS, VS Code, Gradio, Telebot</p>
           </article>
         </div>
@@ -277,15 +282,15 @@
 
       <section class="section-shell" id="education" aria-labelledby="education-title">
         <div class="section-heading">
-          <p class="section-kicker">Education & Research</p>
+          <p class="section-kicker" data-i18n="education.kicker">Education & Research</p>
           <h2 id="education-title">Kazan Federal University</h2>
-          <p>Bachelor's Degree in Software Engineering · 2022-2026 · Kazan, Russia</p>
+          <p data-i18n="education.degree">Bachelor's Degree in Software Engineering · 2022-2026 · Kazan, Russia</p>
         </div>
         <div class="education-layout">
           <article class="thesis-card">
-            <span class="section-kicker">Diploma / Thesis Project</span>
-            <h3>Development of an AI Assistant for Learning Spanish Using Large Language Models</h3>
-            <p>
+            <span class="section-kicker" data-i18n="education.thesisKicker">Diploma / Thesis Project</span>
+            <h3 data-i18n="education.thesisTitle">Development of an AI Assistant for Learning Spanish Using Large Language Models</h3>
+            <p data-i18n="education.thesisCopy">
               A full-stack educational AI system combining LLM interaction, personalized retrieval,
               speech technologies, conversational tutoring, and learning analytics.
             </p>
@@ -312,8 +317,8 @@
 
       <section class="section-shell compact" aria-labelledby="interests-title">
         <div class="section-heading">
-          <p class="section-kicker">Research Interests</p>
-          <h2 id="interests-title">Where I want to grow next.</h2>
+          <p class="section-kicker" data-i18n="interests.kicker">Research Interests</p>
+          <h2 id="interests-title" data-i18n="interests.title">Where I want to grow next.</h2>
         </div>
         <div class="interest-marquee" aria-label="Research interests">
           <span>Conversational AI</span>
@@ -327,9 +332,9 @@
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="section-kicker">Contact</p>
-          <h2 id="contact-title">Let's build the next chapter.</h2>
-          <p>
+          <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
+          <h2 id="contact-title" data-i18n="contact.title">Let's build the next chapter.</h2>
+          <p data-i18n="contact.copy">
             I am interested in AI developer roles, backend internships, research opportunities,
             scholarships, and graduate programs in AI, NLP, HCI, educational technology, and software
             engineering.
@@ -342,9 +347,9 @@
             LinkedIn
           </a>
           <a href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="assets/documents/Amanda_Argotti_CV.pdf">Resume PDF</a>
+          <a href="assets/documents/Amanda_Argotti_CV.pdf" data-i18n="hero.resume">Resume PDF</a>
           <a class="button primary full" href="assets/documents/Amanda_Argotti_CV.pdf" target="_blank" rel="noreferrer">
-            Open CV PDF
+            <span data-i18n="contact.openCv">Open CV PDF</span>
           </a>
         </div>
       </section>
@@ -352,16 +357,16 @@
 
     <dialog class="project-dialog" data-dialog>
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close project details">×</button>
-      <p class="section-kicker">Juanito Architecture</p>
-      <h2>AI learning assistant pipeline</h2>
+      <p class="section-kicker" data-i18n="dialog.kicker">Juanito Architecture</p>
+      <h2 data-i18n="dialog.title">AI learning assistant pipeline</h2>
       <div class="architecture">
-        <div>Student input</div>
-        <div>Intent routing</div>
-        <div>LLM / RAG response</div>
-        <div>Quiz, translation, or speaking practice</div>
-        <div>Progress and vocabulary storage</div>
+        <div data-i18n="dialog.step1">Student input</div>
+        <div data-i18n="dialog.step2">Intent routing</div>
+        <div data-i18n="dialog.step3">LLM / RAG response</div>
+        <div data-i18n="dialog.step4">Quiz, translation, or speaking practice</div>
+        <div data-i18n="dialog.step5">Progress and vocabulary storage</div>
       </div>
-      <p>
+      <p data-i18n="dialog.copy">
         The project connects a Gradio web interface and Telegram bot to Python services, SQLite storage,
         Ollama local models, Whisper speech recognition, and personalized retrieval logic.
       </p>

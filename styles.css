@@ -74,7 +74,8 @@ button {
 }
 
 .brand,
-.nav-links {
+.nav-links,
+.language-switcher {
   display: flex;
   align-items: center;
   gap: 18px;
@@ -101,6 +102,7 @@ button {
 }
 
 .theme-toggle,
+.lang-option,
 .dialog-close {
   display: grid;
   width: 42px;
@@ -111,6 +113,33 @@ button {
   background: transparent;
   color: inherit;
   cursor: pointer;
+}
+
+.language-switcher {
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+}
+
+.lang-option {
+  width: 34px;
+  height: 34px;
+  border-color: transparent;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  opacity: 0.72;
+}
+
+.lang-option.active {
+  background: currentColor;
+  color: var(--deep);
+  opacity: 1;
+}
+
+.site-header.scrolled .lang-option.active {
+  color: var(--surface);
 }
 
 .hero {
@@ -614,6 +643,14 @@ footer {
     display: none;
   }
 
+  .site-header {
+    gap: 10px;
+  }
+
+  .language-switcher {
+    margin-left: auto;
+  }
+
   .hero {
     min-height: 88svh;
     padding-top: 112px;
@@ -667,6 +704,17 @@ footer {
 @media (max-width: 520px) {
   .brand span:last-child {
     display: none;
+  }
+
+  .language-switcher {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .lang-option {
+    width: 30px;
+    height: 30px;
+    font-size: 0.66rem;
   }
 
   .hero h1 {
