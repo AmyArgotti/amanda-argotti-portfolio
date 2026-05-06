@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Amanda Argotti - Software Engineering student and AI developer building multilingual educational AI systems with LLMs, RAG, Python, and NLP."
+    />
+    <title>Amanda Argotti | AI & Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Amanda Argotti home">
+        <span class="brand-mark">AA</span>
+        <span>Amanda Argotti</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="assets/hero-amanda-argotti.png" alt="" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Software Engineering Student · AI Developer · Multilingual Builder</p>
+          <h1 id="hero-title">Amanda Argotti</h1>
+          <p class="hero-lede">
+            I build practical AI-powered educational systems with LLMs, RAG, NLP, and Python backend
+            architecture, with a focus on language learning and human-centered AI.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button secondary" href="mailto:amandaargotti@gmail.com">Contact Me</a>
+          </div>
+          <div class="hero-facts" aria-label="Profile highlights">
+            <span>Kazan, Russia / Ecuador</span>
+            <span>Spanish · English · Russian</span>
+            <span>Open to jobs, internships, and scholarships</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-section section-grid" aria-labelledby="profile-title">
+        <div>
+          <p class="section-kicker">Profile</p>
+          <h2 id="profile-title">A technical CV with an academic signal.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            I am a Software Engineering student at Kazan Federal University working at the intersection
+            of AI, software systems, and education. My strongest application angle is multilingual AI:
+            building systems that can explain, adapt, speak, remember, and support learning across
+            languages.
+          </p>
+          <div class="metrics" aria-label="Portfolio metrics">
+            <article>
+              <strong>2022-2026</strong>
+              <span>B.Sc. Software Engineering</span>
+            </article>
+            <article>
+              <strong>LLM + RAG</strong>
+              <span>Diploma project focus</span>
+            </article>
+            <article>
+              <strong>3 languages</strong>
+              <span>Spanish, English, Russian</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="fit-band" aria-label="Application positioning">
+        <div class="fit-copy">
+          <span class="section-kicker">Positioning</span>
+          <p>
+            Multilingual software engineer building practical AI-powered educational systems using LLMs,
+            NLP, and personalized learning architectures.
+          </p>
+        </div>
+        <div class="fit-tags" aria-label="Best-fit areas">
+          <span>AI</span>
+          <span>NLP</span>
+          <span>Educational Technology</span>
+          <span>Human-AI Interaction</span>
+          <span>Backend Systems</span>
+        </div>
+      </section>
+
+      <section class="section-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-kicker">Selected Work</p>
+          <h2 id="projects-title">Projects built around real learning problems.</h2>
+        </div>
+
+        <div class="project-controls" aria-label="Project filter">
+          <button type="button" class="chip active" data-filter="all">All</button>
+          <button type="button" class="chip" data-filter="ai">AI</button>
+          <button type="button" class="chip" data-filter="backend">Backend</button>
+          <button type="button" class="chip" data-filter="mobile">Mobile</button>
+          <button type="button" class="chip" data-filter="academic">Academic</button>
+          <button type="button" class="chip" data-filter="teaching">Teaching</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card flagship" data-tags="ai backend">
+            <div class="project-topline">
+              <span>Diploma Project · 2025-2026</span>
+              <span>Flagship</span>
+            </div>
+            <h3>Juanito — AI Assistant for Learning Spanish</h3>
+            <p>
+              An intelligent Spanish-learning assistant for Russian-speaking users, integrating local
+              LLM inference, contextual translation, personalized vocabulary, quizzes, speech practice,
+              reminders, progress tracking, and RAG-based adaptation.
+            </p>
+            <div class="project-stack" aria-label="Technologies">
+              <span>Python</span>
+              <span>SQLite</span>
+              <span>Ollama</span>
+              <span>Whisper</span>
+              <span>Gradio</span>
+              <span>Telegram Bot API</span>
+            </div>
+            <div class="project-links">
+              <button class="text-button" type="button" data-project-open="juanito">Explore architecture</button>
+              <a class="text-button" href="https://github.com/AmyArgotti/juanito-spanish-assistant" target="_blank" rel="noreferrer">
+                GitHub repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="mobile backend academic">
+            <div class="project-topline">
+              <span>GitHub · 2026</span>
+              <span>Mobile App</span>
+            </div>
+            <h3>Expense Tracker — Flutter Finance App</h3>
+            <p>
+              A Flutter mobile application for tracking income and expenses with SQLite persistence,
+              MVVM architecture, adaptive navigation, receipt photos, geolocation, notifications,
+              biometric protection, and a service-style sync demo.
+            </p>
+            <div class="project-stack" aria-label="Technologies">
+              <span>Dart</span>
+              <span>Flutter</span>
+              <span>SQLite</span>
+              <span>MVVM</span>
+              <span>SharedPreferences</span>
+            </div>
+            <div class="project-links">
+              <a class="text-button" href="https://github.com/AmyArgotti/expense-tracker-app" target="_blank" rel="noreferrer">
+                GitHub repository
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="backend">
+            <div class="project-topline">
+              <span>Freelance Project</span>
+              <span>Business Logic</span>
+            </div>
+            <h3>Restaurant Loyalty System</h3>
+            <p>
+              Digital loyalty management system for customer tracking, point management, data workflows,
+              and backend business logic.
+            </p>
+            <div class="project-stack" aria-label="Technologies">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>APIs</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="academic backend">
+            <div class="project-topline">
+              <span>Academic GitHub Work · 2022-2024</span>
+              <span>Software Foundations</span>
+            </div>
+            <h3>Java, Vue & Web Engineering Coursework</h3>
+            <p>
+              Public academic repositories showing steady software engineering practice across Java
+              labs, calculator implementations, semester projects, Vue work, HTML/CSS exercises, and
+              JavaScript project files.
+            </p>
+            <div class="project-stack" aria-label="Technologies">
+              <span>Java</span>
+              <span>Vue</span>
+              <span>JavaScript</span>
+              <span>HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a class="text-button" href="https://github.com/AmyArgotti?tab=repositories" target="_blank" rel="noreferrer">
+                View repositories
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="teaching backend">
+            <div class="project-topline">
+              <span>Freelance / Academic Support</span>
+              <span>Mentoring</span>
+            </div>
+            <h3>Informatics Tutoring & Technical Assistance</h3>
+            <p>
+              Technical support and programming assistance for university-level informatics, Python,
+              databases, algorithms, debugging, and software development exercises.
+            </p>
+            <div class="project-stack" aria-label="Areas">
+              <span>Python</span>
+              <span>Databases</span>
+              <span>Algorithms</span>
+              <span>Debugging</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="github-proof" aria-label="GitHub portfolio summary">
+          <div>
+            <p class="section-kicker">GitHub Signal</p>
+            <h3>Public work shows AI, mobile, backend, and academic growth.</h3>
+          </div>
+          <div class="github-stats">
+            <span>15 public repositories</span>
+            <span>Python · Dart · Java · Vue · JavaScript</span>
+            <span>Most recent public work: March 2026</span>
+          </div>
+          <a class="button primary" href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer">Open GitHub</a>
+        </div>
+      </section>
+
+      <section class="section-shell two-column" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading sticky-heading">
+          <p class="section-kicker">Technical Skills</p>
+          <h2 id="skills-title">Modern AI work, grounded in software engineering.</h2>
+          <p>
+            The site highlights both research direction and implementation ability: important for jobs,
+            internships, scholarships, and master's applications.
+          </p>
+        </div>
+        <div class="skill-board">
+          <article>
+            <h3>Programming</h3>
+            <p>Python, SQL, Java, Go, JavaScript</p>
+          </article>
+          <article>
+            <h3>AI / ML</h3>
+            <p>LLMs, prompt engineering, RAG, Ollama, Whisper STT, NLP applications</p>
+          </article>
+          <article>
+            <h3>Backend</h3>
+            <p>REST APIs, client-server architecture, SQLite, JSON storage, database design</p>
+          </article>
+          <article>
+            <h3>Tools</h3>
+            <p>Git, GitHub, Linux/macOS, VS Code, Gradio, Telebot</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" id="education" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="section-kicker">Education & Research</p>
+          <h2 id="education-title">Kazan Federal University</h2>
+          <p>Bachelor's Degree in Software Engineering · 2022-2026 · Kazan, Russia</p>
+        </div>
+        <div class="education-layout">
+          <article class="thesis-card">
+            <span class="section-kicker">Diploma / Thesis Project</span>
+            <h3>Development of an AI Assistant for Learning Spanish Using Large Language Models</h3>
+            <p>
+              A full-stack educational AI system combining LLM interaction, personalized retrieval,
+              speech technologies, conversational tutoring, and learning analytics.
+            </p>
+          </article>
+          <div class="timeline" aria-label="Research focus areas">
+            <button class="timeline-item active" type="button" data-focus="llm">
+              <span>01</span>
+              <strong>Large Language Models</strong>
+              <small>Local AI inference and structured tutoring conversations.</small>
+            </button>
+            <button class="timeline-item" type="button" data-focus="rag">
+              <span>02</span>
+              <strong>RAG Personalization</strong>
+              <small>User vocabulary, progress, and contextual memory.</small>
+            </button>
+            <button class="timeline-item" type="button" data-focus="hci">
+              <span>03</span>
+              <strong>Human-AI Interaction</strong>
+              <small>Adaptive feedback for language-learning workflows.</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell compact" aria-labelledby="interests-title">
+        <div class="section-heading">
+          <p class="section-kicker">Research Interests</p>
+          <h2 id="interests-title">Where I want to grow next.</h2>
+        </div>
+        <div class="interest-marquee" aria-label="Research interests">
+          <span>Conversational AI</span>
+          <span>Educational AI</span>
+          <span>Language Technologies</span>
+          <span>Personalized Systems</span>
+          <span>Multilingual AI</span>
+          <span>Human-Centered AI</span>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Let's build the next chapter.</h2>
+          <p>
+            I am interested in AI developer roles, backend internships, research opportunities,
+            scholarships, and graduate programs in AI, NLP, HCI, educational technology, and software
+            engineering.
+          </p>
+        </div>
+        <div class="contact-panel">
+          <a href="mailto:amandaargotti@gmail.com">amandaargotti@gmail.com</a>
+          <a href="tel:+79178588139">+7 9178588139</a>
+          <a href="https://www.linkedin.com/in/amanda-argotti-63a650386" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer">GitHub</a>
+          <button class="button primary full" type="button" data-print>Print CV</button>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" data-dialog>
+      <button class="dialog-close" type="button" data-dialog-close aria-label="Close project details">×</button>
+      <p class="section-kicker">Juanito Architecture</p>
+      <h2>AI learning assistant pipeline</h2>
+      <div class="architecture">
+        <div>Student input</div>
+        <div>Intent routing</div>
+        <div>LLM / RAG response</div>
+        <div>Quiz, translation, or speaking practice</div>
+        <div>Progress and vocabulary storage</div>
+      </div>
+      <p>
+        The project connects a Gradio web interface and Telegram bot to Python services, SQLite storage,
+        Ollama local models, Whisper speech recognition, and personalized retrieval logic.
+      </p>
+    </dialog>
+
+    <footer>
+      <span>© 2026 Amanda Argotti</span>
+      <span>AI & Software Developer</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
