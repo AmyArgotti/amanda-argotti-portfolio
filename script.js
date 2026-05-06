@@ -5,7 +5,6 @@ const projectCards = document.querySelectorAll(".project-card");
 const dialog = document.querySelector("[data-dialog]");
 const dialogOpen = document.querySelector("[data-project-open]");
 const dialogClose = document.querySelector("[data-dialog-close]");
-const printButton = document.querySelector("[data-print]");
 const timelineButtons = document.querySelectorAll("[data-focus]");
 
 const applyTheme = (theme) => {
@@ -59,8 +58,4 @@ dialog.addEventListener("click", (event) => {
   if (event.target === dialog) {
     dialog.close();
   }
-});
-
-printButton.addEventListener("click", () => {
-  window.print();
 });
