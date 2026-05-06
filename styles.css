@@ -22,7 +22,7 @@
   --rose: #e4a1a3;
   --sage: #9bb1a3;
   --gold: #d7b76d;
-  --deep: #f6efe5;
+  --deep: #0f1713;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
@@ -133,13 +133,16 @@ button {
 }
 
 .lang-option.active {
-  background: currentColor;
-  color: var(--deep);
+  background: #fffaf3;
+  border-color: #fffaf3;
+  color: #14211d;
   opacity: 1;
 }
 
 .site-header.scrolled .lang-option.active {
-  color: var(--surface);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
 }
 
 .hero {
@@ -170,9 +173,46 @@ button {
     linear-gradient(0deg, rgba(19, 28, 24, 0.5), transparent 42%);
 }
 
-.hero-content {
+.hero-inner {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(220px, 360px);
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 6vw, 92px);
+  width: 100%;
+}
+
+.hero-content {
   max-width: 760px;
+}
+
+.hero-portrait {
+  width: min(30vw, 360px);
+  min-width: 240px;
+  margin: 0;
+  justify-self: end;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid rgba(255, 250, 243, 0.32);
+  border-radius: 8px;
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.36);
+}
+
+.hero-portrait::after {
+  content: "";
+  display: block;
+  width: 72%;
+  height: 8px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: rgba(255, 250, 243, 0.24);
+  filter: blur(10px);
 }
 
 .eyebrow,
@@ -648,12 +688,36 @@ footer {
   }
 
   .language-switcher {
+    gap: 3px;
+    padding: 3px;
     margin-left: auto;
+  }
+
+  .lang-option {
+    width: 31px;
+    height: 31px;
+    font-size: 0.66rem;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
   }
 
   .hero {
     min-height: 88svh;
     padding-top: 112px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .hero-portrait {
+    width: min(48vw, 230px);
+    min-width: 160px;
+    justify-self: start;
   }
 
   .hero-overlay {
@@ -706,19 +770,18 @@ footer {
     display: none;
   }
 
-  .language-switcher {
-    gap: 2px;
-    padding: 3px;
-  }
-
   .lang-option {
-    width: 30px;
-    height: 30px;
-    font-size: 0.66rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.62rem;
   }
 
   .hero h1 {
     font-size: 4.1rem;
+  }
+
+  .hero-portrait {
+    width: min(58vw, 190px);
   }
 
   .button {
