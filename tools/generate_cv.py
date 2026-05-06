@@ -168,7 +168,7 @@ def main():
             "Kazan, Russia / Ecuador<br/>"
             "Portfolio: amyargotti.github.io/amanda-argotti-portfolio/<br/>"
             "GitHub: github.com/AmyArgotti<br/>"
-            "LinkedIn: linkedin.com/in/amanda-argotti-63a650386",
+            "LinkedIn: linkedin.com/in/amanda-argotti",
             s["contact"],
         )
     ]
