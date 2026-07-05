@@ -7,6 +7,13 @@ const dialogOpen = document.querySelector("[data-project-open]");
 const dialogClose = document.querySelector("[data-dialog-close]");
 const timelineButtons = document.querySelectorAll("[data-focus]");
 const languageButtons = document.querySelectorAll("[data-lang]");
+const primaryCvLinks = document.querySelectorAll("[data-primary-cv]");
+
+const cvFiles = {
+  en: "Amanda_Argotti_CV_EN.pdf",
+  es: "Amanda_Argotti_CV_ES.pdf",
+  ru: "Amanda_Argotti_CV_RU.pdf",
+};
 
 const translations = {
   en: {
@@ -14,17 +21,20 @@ const translations = {
     "nav.skills": "Skills",
     "nav.education": "Education",
     "nav.contact": "Contact",
-    "hero.eyebrow": "Software Engineering Student · AI Developer · Multilingual Builder",
+    "hero.eyebrow": "Software Engineer · AI Developer · Multilingual Builder",
     "hero.lede":
       "I build practical AI-powered educational systems with LLMs, RAG, NLP, and Python backend architecture, with a focus on language learning and human-centered AI.",
     "hero.projects": "View Projects",
-    "hero.resume": "Resume PDF",
+    "hero.resume": "Download CV",
     "hero.languages": "Spanish · English · Russian",
-    "hero.open": "Open to jobs, internships, and scholarships",
+    "hero.open": "Open to Software Engineer, AI Developer, and Python Backend roles",
     "profile.kicker": "Profile",
-    "profile.title": "A technical CV with an academic signal.",
+    "profile.title": "Engineering skills backed by working projects.",
     "profile.copy":
-      "I am a Software Engineering student at Kazan Federal University working at the intersection of AI, software systems, and education. My strongest application angle is multilingual AI: building systems that can explain, adapt, speak, remember, and support learning across languages.",
+      "I am a Software Engineer and Kazan Federal University graduate working at the intersection of AI, software systems, and education. My strongest application angle is multilingual AI: building systems that can explain, adapt, speak, remember, and support learning across languages.",
+    "metric.degree": "B.Sc. Software Engineering",
+    "metric.ai": "AI system development",
+    "metric.languages": "Spanish, English, Russian",
     "fit.copy":
       "Multilingual software engineer building practical AI-powered educational systems using LLMs, NLP, and personalized learning architectures.",
     "projects.kicker": "Selected Work",
@@ -53,34 +63,38 @@ const translations = {
     "tutoring.copy":
       "Technical support and programming assistance for university-level informatics, Python, databases, algorithms, debugging, and software development exercises.",
     "github.kicker": "GitHub Signal",
-    "github.title": "Public work shows AI, mobile, backend, and academic growth.",
-    "github.repos": "15 public repositories",
-    "github.recent": "Most recent public work: March 2026",
+    "github.title": "Public work across AI, mobile, backend, and software foundations.",
+    "github.repos": "16 public repositories",
+    "github.recent": "Portfolio and public work updated in 2026",
     "github.open": "Open GitHub",
     "skills.kicker": "Technical Skills",
     "skills.title": "Modern AI work, grounded in software engineering.",
     "skills.copy":
-      "The site highlights both research direction and implementation ability: important for jobs, internships, scholarships, and master's applications.",
+      "I turn product requirements into working software across AI workflows, backend services, local data, and mobile interfaces.",
     "skills.programming": "Programming",
     "skills.ai": "AI / ML",
     "skills.backend": "Backend",
     "skills.tools": "Tools",
-    "education.kicker": "Education & Research",
-    "education.degree": "Bachelor's Degree in Software Engineering · 2022-2026 · Kazan, Russia",
+    "education.kicker": "Education",
+    "education.degree": "B.S. in Software Engineering · 2022-2026 · Kazan, Russia",
     "education.thesisKicker": "Diploma / Thesis Project",
     "education.thesisTitle": "Development of an AI Assistant for Learning Spanish Using Large Language Models",
     "education.thesisCopy":
       "A full-stack educational AI system combining LLM interaction, personalized retrieval, speech technologies, conversational tutoring, and learning analytics.",
-    "interests.kicker": "Research Interests",
-    "interests.title": "Where I want to grow next.",
+    "interests.kicker": "Role Focus",
+    "interests.title": "Where I can contribute now.",
     "contact.kicker": "Contact",
     "contact.title": "Let's build the next chapter.",
     "contact.copy":
-      "I am interested in AI developer roles, backend internships, research opportunities, scholarships, and graduate programs in AI, NLP, HCI, educational technology, and software engineering.",
-    "contact.openCv": "Open CV PDF",
+      "I am available for Software Engineer, AI Developer, and Python Backend opportunities where I can build useful products, learn quickly, and contribute across the development lifecycle.",
+    "cv.title": "Download CV",
+    "cv.en": "English",
+    "cv.es": "Spanish",
+    "cv.ru": "Russian",
+    "contact.openCv": "Download English CV",
     "dialog.kicker": "Juanito Architecture",
     "dialog.title": "AI learning assistant pipeline",
-    "dialog.step1": "Student input",
+    "dialog.step1": "Learner input",
     "dialog.step2": "Intent routing",
     "dialog.step3": "LLM / RAG response",
     "dialog.step4": "Quiz, translation, or speaking practice",
@@ -93,17 +107,20 @@ const translations = {
     "nav.skills": "Habilidades",
     "nav.education": "Educación",
     "nav.contact": "Contacto",
-    "hero.eyebrow": "Estudiante de Ingeniería de Software · Desarrolladora de IA · Perfil Multilingüe",
+    "hero.eyebrow": "Ingeniera de Software · Desarrolladora de IA · Perfil Multilingüe",
     "hero.lede":
       "Construyo sistemas educativos con IA usando LLMs, RAG, NLP y arquitectura backend en Python, con enfoque en aprendizaje de idiomas e IA centrada en las personas.",
     "hero.projects": "Ver Proyectos",
-    "hero.resume": "CV PDF",
+    "hero.resume": "Descargar CV",
     "hero.languages": "Español · Inglés · Ruso",
-    "hero.open": "Abierta a empleos, pasantías y becas",
+    "hero.open": "Disponible para roles de Ingeniería de Software, IA y Backend Python",
     "profile.kicker": "Perfil",
-    "profile.title": "Un CV técnico con señal académica.",
+    "profile.title": "Habilidades de ingeniería respaldadas por proyectos funcionales.",
     "profile.copy":
-      "Soy estudiante de Ingeniería de Software en la Universidad Federal de Kazán y trabajo en la intersección de IA, sistemas de software y educación. Mi ángulo más fuerte es la IA multilingüe: sistemas que explican, se adaptan, hablan, recuerdan y apoyan el aprendizaje entre idiomas.",
+      "Soy Ingeniera de Software graduada de la Universidad Federal de Kazán y trabajo en la intersección de IA, sistemas de software y educación. Mi ángulo más fuerte es la IA multilingüe: sistemas que explican, se adaptan, hablan, recuerdan y apoyan el aprendizaje entre idiomas.",
+    "metric.degree": "Licenciatura en Ingeniería de Software",
+    "metric.ai": "Desarrollo de sistemas de IA",
+    "metric.languages": "Español, inglés y ruso",
     "fit.copy":
       "Ingeniera de software multilingüe que construye sistemas educativos prácticos con IA usando LLMs, NLP y arquitecturas de aprendizaje personalizado.",
     "projects.kicker": "Trabajo Seleccionado",
@@ -132,34 +149,38 @@ const translations = {
     "tutoring.copy":
       "Apoyo técnico y asistencia de programación para tareas universitarias de informática, Python, bases de datos, algoritmos, debugging y ejercicios de desarrollo.",
     "github.kicker": "Señal GitHub",
-    "github.title": "Trabajo público en IA, móvil, backend y crecimiento académico.",
-    "github.repos": "15 repositorios públicos",
-    "github.recent": "Trabajo público más reciente: marzo de 2026",
+    "github.title": "Trabajo público en IA, móvil, backend y fundamentos de software.",
+    "github.repos": "16 repositorios públicos",
+    "github.recent": "Portafolio y trabajo público actualizados en 2026",
     "github.open": "Abrir GitHub",
     "skills.kicker": "Habilidades Técnicas",
     "skills.title": "Trabajo moderno en IA, con base en ingeniería de software.",
     "skills.copy":
-      "El sitio destaca dirección investigativa y capacidad de implementación: importante para empleos, pasantías, becas y aplicaciones de maestría.",
+      "Convierto requisitos de producto en software funcional: flujos de IA, servicios backend, datos locales e interfaces móviles.",
     "skills.programming": "Programación",
     "skills.ai": "IA / ML",
     "skills.backend": "Backend",
     "skills.tools": "Herramientas",
-    "education.kicker": "Educación e Investigación",
+    "education.kicker": "Educación",
     "education.degree": "Licenciatura en Ingeniería de Software · 2022-2026 · Kazán, Rusia",
     "education.thesisKicker": "Proyecto de Diploma / Tesis",
     "education.thesisTitle": "Desarrollo de un Asistente de IA para Aprender Español usando Modelos de Lenguaje Grandes",
     "education.thesisCopy":
       "Sistema educativo full-stack con interacción LLM, recuperación personalizada, tecnologías de voz, tutor conversacional y analítica de aprendizaje.",
-    "interests.kicker": "Intereses de Investigación",
-    "interests.title": "Dónde quiero crecer ahora.",
+    "interests.kicker": "Enfoque Profesional",
+    "interests.title": "Dónde puedo contribuir ahora.",
     "contact.kicker": "Contacto",
     "contact.title": "Construyamos el siguiente capítulo.",
     "contact.copy":
-      "Me interesan roles de desarrolladora de IA, pasantías backend, oportunidades de investigación, becas y programas de maestría en IA, NLP, HCI, tecnología educativa e ingeniería de software.",
-    "contact.openCv": "Abrir CV PDF",
+      "Estoy disponible para oportunidades como Ingeniera de Software, Desarrolladora de IA y Backend Python, donde pueda crear productos útiles y contribuir en todo el ciclo de desarrollo.",
+    "cv.title": "Descargar CV",
+    "cv.en": "Inglés",
+    "cv.es": "Español",
+    "cv.ru": "Ruso",
+    "contact.openCv": "Descargar CV en español",
     "dialog.kicker": "Arquitectura de Juanito",
     "dialog.title": "Pipeline del asistente de aprendizaje con IA",
-    "dialog.step1": "Entrada del estudiante",
+    "dialog.step1": "Entrada del usuario",
     "dialog.step2": "Detección de intención",
     "dialog.step3": "Respuesta LLM / RAG",
     "dialog.step4": "Quiz, traducción o práctica oral",
@@ -172,17 +193,20 @@ const translations = {
     "nav.skills": "Навыки",
     "nav.education": "Образование",
     "nav.contact": "Контакты",
-    "hero.eyebrow": "Студентка Software Engineering · AI Developer · Многоязычный профиль",
+    "hero.eyebrow": "Software Engineer · AI Developer · Многоязычный профиль",
     "hero.lede":
       "Я создаю практические образовательные AI-системы с LLM, RAG, NLP и backend-архитектурой на Python, с фокусом на изучение языков и human-centered AI.",
     "hero.projects": "Смотреть проекты",
-    "hero.resume": "CV PDF",
+    "hero.resume": "Скачать резюме",
     "hero.languages": "Испанский · Английский · Русский",
-    "hero.open": "Открыта к работе, стажировкам и стипендиям",
+    "hero.open": "Рассматриваю позиции Software Engineer, AI Developer и Python Backend Developer",
     "profile.kicker": "Профиль",
-    "profile.title": "Техническое CV с академическим фокусом.",
+    "profile.title": "Инженерные навыки, подтвержденные работающими проектами.",
     "profile.copy":
-      "Я студентка Software Engineering в Казанском федеральном университете и работаю на пересечении AI, программных систем и образования. Моя сильная сторона — многоязычный AI: системы, которые объясняют, адаптируются, говорят, запоминают и помогают учиться на разных языках.",
+      "Я Software Engineer и выпускница Казанского федерального университета, работаю на пересечении AI, программных систем и образования. Моя сильная сторона — многоязычный AI: системы, которые объясняют, адаптируются, говорят, запоминают и помогают учиться на разных языках.",
+    "metric.degree": "Бакалавр программной инженерии",
+    "metric.ai": "Разработка AI-систем",
+    "metric.languages": "Испанский, английский, русский",
     "fit.copy":
       "Многоязычный software engineer, создающий практические образовательные AI-системы с LLM, NLP и архитектурами персонализированного обучения.",
     "projects.kicker": "Избранные работы",
@@ -211,34 +235,38 @@ const translations = {
     "tutoring.copy":
       "Техническая поддержка и помощь с программированием для университетских задач по информатике, Python, базам данных, алгоритмам, debugging и разработке.",
     "github.kicker": "GitHub сигнал",
-    "github.title": "Публичные работы показывают рост в AI, mobile, backend и академических проектах.",
-    "github.repos": "15 публичных репозиториев",
-    "github.recent": "Самая свежая публичная работа: март 2026",
+    "github.title": "Публичные проекты в AI, mobile, backend и основах разработки.",
+    "github.repos": "16 публичных репозиториев",
+    "github.recent": "Портфолио и публичные проекты обновлены в 2026 году",
     "github.open": "Открыть GitHub",
     "skills.kicker": "Технические навыки",
     "skills.title": "Современная AI-разработка на базе software engineering.",
     "skills.copy":
-      "Сайт показывает и исследовательское направление, и умение реализовывать системы: важно для работы, стажировок, стипендий и магистратуры.",
+      "Превращаю требования к продукту в работающий софт: AI-сценарии, backend-сервисы, локальные данные и мобильные интерфейсы.",
     "skills.programming": "Программирование",
     "skills.ai": "AI / ML",
     "skills.backend": "Backend",
     "skills.tools": "Инструменты",
-    "education.kicker": "Образование и исследования",
+    "education.kicker": "Образование",
     "education.degree": "Бакалавриат Software Engineering · 2022-2026 · Казань, Россия",
     "education.thesisKicker": "Дипломный проект",
     "education.thesisTitle": "Разработка AI-ассистента для изучения испанского языка с использованием LLM",
     "education.thesisCopy":
       "Full-stack образовательная AI-система с LLM-взаимодействием, персонализированным retrieval, речевыми технологиями, разговорным tutor и аналитикой обучения.",
-    "interests.kicker": "Научные интересы",
-    "interests.title": "Куда я хочу развиваться дальше.",
+    "interests.kicker": "Профессиональный фокус",
+    "interests.title": "Где я могу приносить пользу уже сейчас.",
     "contact.kicker": "Контакты",
     "contact.title": "Давайте построим следующий этап.",
     "contact.copy":
-      "Мне интересны роли AI developer, backend-стажировки, research opportunities, стипендии и магистерские программы в AI, NLP, HCI, образовательных технологиях и software engineering.",
-    "contact.openCv": "Открыть CV PDF",
+      "Рассматриваю позиции Software Engineer, AI Developer и Python Backend Developer, где смогу создавать полезные продукты и участвовать во всем цикле разработки.",
+    "cv.title": "Скачать резюме",
+    "cv.en": "Английский",
+    "cv.es": "Испанский",
+    "cv.ru": "Русский",
+    "contact.openCv": "Скачать резюме на русском",
     "dialog.kicker": "Архитектура Juanito",
     "dialog.title": "Pipeline AI-ассистента для обучения",
-    "dialog.step1": "Ввод студента",
+    "dialog.step1": "Ввод пользователя",
     "dialog.step2": "Определение intent",
     "dialog.step3": "LLM / RAG ответ",
     "dialog.step4": "Тест, перевод или разговорная практика",
@@ -250,6 +278,7 @@ const translations = {
 
 const applyLanguage = (lang) => {
   const dictionary = translations[lang] || translations.en;
+  const cvFile = cvFiles[lang] || cvFiles.en;
 
   document.documentElement.lang = lang;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -262,6 +291,11 @@ const applyLanguage = (lang) => {
   languageButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === lang);
     button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
+  });
+
+  primaryCvLinks.forEach((link) => {
+    link.href = `assets/documents/${cvFile}`;
+    link.download = cvFile;
   });
 
   localStorage.setItem("portfolio-language", lang);

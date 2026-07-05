@@ -623,6 +623,33 @@ button {
   overflow-wrap: anywhere;
 }
 
+.cv-downloads {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto);
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 250, 243, 0.18);
+  border-bottom: 1px solid rgba(255, 250, 243, 0.18);
+}
+
+.cv-downloads strong {
+  color: #fffaf3;
+}
+
+.contact-panel .cv-downloads a {
+  min-width: 72px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 250, 243, 0.28);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.contact-panel .button {
+  border-bottom: 1px solid var(--rose);
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -785,6 +812,14 @@ footer {
   }
 
   .button {
+    width: 100%;
+  }
+
+  .cv-downloads {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel .cv-downloads a {
     width: 100%;
   }
 
