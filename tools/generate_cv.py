@@ -211,7 +211,7 @@ def build_cv(lang, data):
     left = [p("Amanda Argotti", s["name"]), p(data["role"], s["role"]), p(data["pitch"], s["small"])]
     right = [p(
         '<link href="mailto:amandaargotti@gmail.com">amandaargotti@gmail.com</link><br/>'
-        '<link href="tel:+79178588139">+7 917 858-81-39</link><br/>'
+        '<link href="tel:+593959033244">+593 95 903 3244</link><br/>'
         'Kazan, Russia / Ecuador<br/>'
         '<link href="https://amyargotti.github.io/amanda-argotti-portfolio/">Portfolio</link> · '
         '<link href="https://github.com/AmyArgotti">GitHub</link> · '
