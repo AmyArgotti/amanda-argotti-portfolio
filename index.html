@@ -1,402 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Amanda Argotti is a software engineer building AI, Python backend, and mobile applications with LLMs, RAG, Flutter, and multilingual product experience."
-    />
-    <title>Amanda Argotti | Software Engineer & AI Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20260705-job-search-v2" />
-  </head>
-  <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Amanda Argotti home">
-        <span class="brand-mark">AA</span>
-        <span>Amanda Argotti</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#skills" data-i18n="nav.skills">Skills</a>
-        <a href="#education" data-i18n="nav.education">Education</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <div class="language-switcher" aria-label="Language selector">
-        <button class="lang-option active" type="button" data-lang="en">EN</button>
-        <button class="lang-option" type="button" data-lang="es">ES</button>
-        <button class="lang-option" type="button" data-lang="ru">RU</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Amanda Argotti, software engineer in Quito, Ecuador. Full-stack development, UI/UX, Figma, and LLM integration. Open to relocation." />
+  <meta property="og:title" content="Amanda Argotti | Software Engineer" />
+  <meta property="og:description" content="Full-stack development, UI/UX and LLM integration. Selected work and multilingual CVs." />
+  <meta property="og:image" content="https://amyargotti.github.io/amanda-argotti-portfolio/assets/amanda-argotti-portrait.jpg" />
+  <meta property="og:url" content="https://amyargotti.github.io/amanda-argotti-portfolio/" />
+  <link rel="canonical" href="https://amyargotti.github.io/amanda-argotti-portfolio/" />
+  <title>Amanda Argotti | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261013" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-ui="skip">Skip to content</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Amanda Argotti"><span class="brand-mark">AA</span><span>Amanda Argotti</span></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="#projects" data-ui="projects">Projects</a><a href="#experience" data-ui="experience">Experience</a><a href="#education" data-ui="education">Qualifications</a><a href="#contact" data-ui="contact">Contact</a></nav>
+    <div class="language-switcher" data-label="language">
+      <button class="lang-option active" type="button" data-lang="en" aria-pressed="true" aria-label="English">EN</button><button class="lang-option" type="button" data-lang="es" aria-pressed="false" aria-label="Español">ES</button><button class="lang-option" type="button" data-lang="ru" aria-pressed="false" aria-label="Русский">RU</button>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle data-label="theme" aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"><img src="assets/hero-amanda-argotti.png" alt="" /></div><div class="hero-overlay"></div>
+      <div class="hero-inner"><div class="hero-content">
+        <p class="eyebrow" data-content="role">Software Engineer | Full-Stack Development &amp; LLM Integration</p><h1 id="hero-title">Amanda Argotti</h1>
+        <p class="hero-lede" data-content="hero">I build thoughtful web interfaces, practical backend services, and AI features with local language models.</p>
+        <div class="hero-actions"><a class="button primary" href="#projects" data-ui="projects">Projects</a><a class="button secondary" href="assets/documents/Amanda_Argotti_CV_EN.pdf?v=20261013" download data-primary-cv data-ui="download">Download CV</a></div>
+        <div class="hero-facts"><span data-content="location">Quito, Ecuador · Open to relocation</span><span data-ui="native">Spanish native · English B2 certified · Russian B1</span></div>
+      </div><figure class="hero-portrait"><img src="assets/amanda-argotti-portrait.jpg" alt="Amanda Argotti" width="600" height="600" /></figure></div>
+    </section>
+    <section class="intro-section section-grid" aria-labelledby="profile-title"><div><p class="section-kicker" data-ui="profile">Profile</p><h2 id="profile-title" data-ui="profileTitle">Design, engineering, and useful AI.</h2></div><div class="intro-copy"><p data-content="summary"></p></div></section>
+    <section class="section-shell" id="experience" aria-labelledby="experience-title"><div class="section-heading"><p class="section-kicker" data-ui="experience">Experience</p><h2 id="experience-title" data-ui="experienceTitle">Freelance technical experience</h2></div><div data-experience></div></section>
+    <section class="section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><p class="section-kicker" data-ui="projects">Projects</p><h2 id="projects-title" data-ui="workTitle">Selected software projects</h2></div>
+      <div class="project-controls" role="group" aria-labelledby="projects-title"><button type="button" class="chip active" data-filter="all" aria-pressed="true" data-ui="all">All</button><button type="button" class="chip" data-filter="web" aria-pressed="false" data-ui="web">Web</button><button type="button" class="chip" data-filter="ai" aria-pressed="false" data-ui="ai">AI</button><button type="button" class="chip" data-filter="mobile" aria-pressed="false" data-ui="mobile">Mobile</button></div>
+      <div class="project-grid" data-projects></div>
+      <div class="github-proof"><div><h3 data-ui="proof">Explore the implementation and source code.</h3><p data-ui="proofCopy"></p></div><a class="button primary" href="https://github.com/AmyArgotti" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+    </section>
+    <section class="section-shell two-column" id="skills" aria-labelledby="skills-title"><div class="section-heading sticky-heading"><p class="section-kicker" data-ui="skills">Skills</p><h2 id="skills-title" data-ui="skillsTitle">From interface to integration</h2></div><div class="skill-board" data-skills></div></section>
+    <section class="section-shell section-grid design-section" aria-labelledby="design-title"><div><p class="section-kicker">UI/UX</p><h2 id="design-title" data-ui="designTitle">UI/UX &amp; Figma</h2></div><div><p data-ui="designCopy"></p><p data-ui="designScope"></p><a class="text-button" href="#projects" data-ui="projects">Projects</a></div></section>
+    <section class="section-shell" id="education" aria-labelledby="education-title"><div class="section-heading"><p class="section-kicker" data-ui="education">Qualifications</p><h2 id="education-title" data-ui="educationTitle">Education &amp; qualifications</h2></div><div class="qualification-list" data-qualifications></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy"><p class="section-kicker" data-ui="contact">Contact</p><h2 id="contact-title" data-ui="contactTitle">Let's build something useful.</h2><p data-ui="contactCopy"></p></div>
+      <div class="contact-panel">
+        <a href="mailto:amandaargotti@gmail.com">amandaargotti@gmail.com</a><a href="tel:+593959033244">+593 95 903 3244</a><a href="https://www.linkedin.com/in/amanda-argotti" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/AmyArgotti" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <strong data-ui="cvTitle">Choose your CV</strong>
+        <fieldset class="cv-mode"><legend class="sr-only" data-ui="cvTitle">Choose your CV</legend><label><input type="radio" name="cv-mode" value="job" checked /><span data-ui="jobCv">Job CV</span></label><label><input type="radio" name="cv-mode" value="academic" /><span data-ui="academicCv">Academic CV</span></label></fieldset>
+        <div class="cv-downloads" data-cv-downloads></div><a class="button primary full" href="assets/documents/Amanda_Argotti_CV_EN.pdf?v=20261013" download data-primary-cv data-ui="download">Download CV</a>
       </div>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
-        <span aria-hidden="true">◐</span>
-      </button>
-    </header>
-
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <img src="assets/hero-amanda-argotti.png" alt="" />
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-inner">
-          <div class="hero-content">
-            <p class="eyebrow" data-i18n="hero.eyebrow">Software Engineer · AI Developer · Multilingual Builder</p>
-            <h1 id="hero-title">Amanda Argotti</h1>
-            <p class="hero-lede" data-i18n="hero.lede">
-              I build practical AI-powered educational systems with LLMs, RAG, NLP, and Python backend
-              architecture, with a focus on language learning and human-centered AI.
-            </p>
-            <div class="hero-actions" aria-label="Primary actions">
-              <a class="button primary" href="#projects" data-i18n="hero.projects">View Projects</a>
-              <a
-                class="button secondary"
-                href="assets/documents/Amanda_Argotti_CV_EN.pdf"
-                download="Amanda_Argotti_CV_EN.pdf"
-                data-primary-cv
-                data-i18n="hero.resume"
-              >Download CV</a>
-            </div>
-            <div class="hero-facts" aria-label="Profile highlights">
-              <span>Kazan, Russia / Ecuador</span>
-              <span data-i18n="hero.languages">Spanish · English · Russian</span>
-              <span data-i18n="hero.open">Open to Software Engineer, AI Developer, and Python Backend roles</span>
-            </div>
-          </div>
-          <figure class="hero-portrait">
-            <img src="assets/amanda-argotti-portrait.jpg" alt="Portrait of Amanda Argotti" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="intro-section section-grid" aria-labelledby="profile-title">
-        <div>
-          <p class="section-kicker" data-i18n="profile.kicker">Profile</p>
-          <h2 id="profile-title" data-i18n="profile.title">Engineering skills backed by working projects.</h2>
-        </div>
-        <div class="intro-copy">
-          <p data-i18n="profile.copy">
-            I am a Software Engineer and Kazan Federal University graduate working at the intersection
-            of AI, software systems, and education. My strongest application angle is multilingual AI:
-            building systems that can explain, adapt, speak, remember, and support learning across
-            languages.
-          </p>
-          <div class="metrics" aria-label="Portfolio metrics">
-            <article>
-              <strong>2022-2026</strong>
-              <span data-i18n="metric.degree">B.Sc. Software Engineering</span>
-            </article>
-            <article>
-              <strong>LLM + RAG</strong>
-              <span data-i18n="metric.ai">AI system development</span>
-            </article>
-            <article>
-              <strong>3 languages</strong>
-              <span data-i18n="metric.languages">Spanish, English, Russian</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="fit-band" aria-label="Application positioning">
-        <div class="fit-copy">
-          <span class="section-kicker">Positioning</span>
-          <p data-i18n="fit.copy">
-            Multilingual software engineer building practical AI-powered educational systems using LLMs,
-            NLP, and personalized learning architectures.
-          </p>
-        </div>
-        <div class="fit-tags" aria-label="Best-fit areas">
-          <span>AI</span>
-          <span>NLP</span>
-          <span>Educational Technology</span>
-          <span>Human-AI Interaction</span>
-          <span>Backend Systems</span>
-        </div>
-      </section>
-
-      <section class="section-shell" id="projects" aria-labelledby="projects-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="projects.kicker">Selected Work</p>
-          <h2 id="projects-title" data-i18n="projects.title">Projects built around real learning problems.</h2>
-        </div>
-
-        <div class="project-controls" aria-label="Project filter">
-          <button type="button" class="chip active" data-filter="all" data-i18n="filter.all">All</button>
-          <button type="button" class="chip" data-filter="ai">AI</button>
-          <button type="button" class="chip" data-filter="backend" data-i18n="filter.backend">Backend</button>
-          <button type="button" class="chip" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
-          <button type="button" class="chip" data-filter="academic" data-i18n="filter.academic">Academic</button>
-          <button type="button" class="chip" data-filter="teaching" data-i18n="filter.teaching">Teaching</button>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card flagship" data-tags="ai backend">
-            <div class="project-topline">
-              <span>Diploma Project · 2025-2026</span>
-              <span>Flagship</span>
-            </div>
-            <h3 data-i18n="juanito.title">Juanito — AI Assistant for Learning Spanish</h3>
-            <p data-i18n="juanito.copy">
-              An intelligent Spanish-learning assistant for Russian-speaking users, integrating local
-              LLM inference, contextual translation, personalized vocabulary, quizzes, speech practice,
-              reminders, progress tracking, and RAG-based adaptation.
-            </p>
-            <div class="project-stack" aria-label="Technologies">
-              <span>Python</span>
-              <span>SQLite</span>
-              <span>Ollama</span>
-              <span>Whisper</span>
-              <span>Gradio</span>
-              <span>Telegram Bot API</span>
-            </div>
-            <div class="project-links">
-              <button class="text-button" type="button" data-project-open="juanito" data-i18n="projects.architecture">Explore architecture</button>
-              <a class="text-button" href="https://github.com/AmyArgotti/juanito-spanish-assistant" target="_blank" rel="noreferrer">
-                <span data-i18n="projects.github">GitHub repository</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card" data-tags="mobile backend academic">
-            <div class="project-topline">
-              <span>GitHub · 2026</span>
-              <span>Mobile App</span>
-            </div>
-            <h3 data-i18n="expense.title">Expense Tracker — Flutter Finance App</h3>
-            <p data-i18n="expense.copy">
-              A Flutter mobile application for tracking income and expenses with SQLite persistence,
-              MVVM architecture, adaptive navigation, receipt photos, geolocation, notifications,
-              biometric protection, and a service-style sync demo.
-            </p>
-            <div class="project-stack" aria-label="Technologies">
-              <span>Dart</span>
-              <span>Flutter</span>
-              <span>SQLite</span>
-              <span>MVVM</span>
-              <span>SharedPreferences</span>
-            </div>
-            <div class="project-links">
-              <a class="text-button" href="https://github.com/AmyArgotti/expense-tracker-app" target="_blank" rel="noreferrer">
-                <span data-i18n="projects.github">GitHub repository</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card" data-tags="backend">
-            <div class="project-topline">
-              <span>Freelance Project</span>
-              <span>Business Logic</span>
-            </div>
-            <h3 data-i18n="loyalty.title">Restaurant Loyalty System</h3>
-            <p data-i18n="loyalty.copy">
-              Digital loyalty management system for customer tracking, point management, data workflows,
-              and backend business logic.
-            </p>
-            <div class="project-stack" aria-label="Technologies">
-              <span>Python</span>
-              <span>SQL</span>
-              <span>APIs</span>
-            </div>
-          </article>
-
-          <article class="project-card" data-tags="academic backend">
-            <div class="project-topline">
-              <span>Academic GitHub Work · 2022-2024</span>
-              <span>Software Foundations</span>
-            </div>
-            <h3 data-i18n="coursework.title">Java, Vue & Web Engineering Coursework</h3>
-            <p data-i18n="coursework.copy">
-              Public academic repositories showing steady software engineering practice across Java
-              labs, calculator implementations, semester projects, Vue work, HTML/CSS exercises, and
-              JavaScript project files.
-            </p>
-            <div class="project-stack" aria-label="Technologies">
-              <span>Java</span>
-              <span>Vue</span>
-              <span>JavaScript</span>
-              <span>HTML/CSS</span>
-            </div>
-            <div class="project-links">
-              <a class="text-button" href="https://github.com/AmyArgotti?tab=repositories" target="_blank" rel="noreferrer">
-                <span data-i18n="projects.repos">View repositories</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card" data-tags="teaching backend">
-            <div class="project-topline">
-              <span>Freelance / Academic Support</span>
-              <span>Mentoring</span>
-            </div>
-            <h3 data-i18n="tutoring.title">Informatics Tutoring & Technical Assistance</h3>
-            <p data-i18n="tutoring.copy">
-              Technical support and programming assistance for university-level informatics, Python,
-              databases, algorithms, debugging, and software development exercises.
-            </p>
-            <div class="project-stack" aria-label="Areas">
-              <span>Python</span>
-              <span>Databases</span>
-              <span>Algorithms</span>
-              <span>Debugging</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="github-proof" aria-label="GitHub portfolio summary">
-          <div>
-            <p class="section-kicker" data-i18n="github.kicker">GitHub Signal</p>
-            <h3 data-i18n="github.title">Public work shows AI, mobile, backend, and academic growth.</h3>
-          </div>
-          <div class="github-stats">
-            <span data-i18n="github.repos">16 public repositories</span>
-            <span>Python · Dart · Java · Vue · JavaScript</span>
-            <span data-i18n="github.recent">Portfolio and public work updated in 2026</span>
-          </div>
-          <a class="button primary" href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer" data-i18n="github.open">Open GitHub</a>
-        </div>
-      </section>
-
-      <section class="section-shell two-column" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading sticky-heading">
-          <p class="section-kicker" data-i18n="skills.kicker">Technical Skills</p>
-          <h2 id="skills-title" data-i18n="skills.title">Modern AI work, grounded in software engineering.</h2>
-          <p data-i18n="skills.copy">
-            I turn product requirements into working software across AI workflows, backend services,
-            local data, and mobile interfaces.
-          </p>
-        </div>
-        <div class="skill-board">
-          <article>
-            <h3 data-i18n="skills.programming">Programming</h3>
-            <p>Python, SQL, Java, Go, JavaScript</p>
-          </article>
-          <article>
-            <h3 data-i18n="skills.ai">AI / ML</h3>
-            <p>LLMs, prompt engineering, RAG, Ollama, Whisper STT, NLP applications</p>
-          </article>
-          <article>
-            <h3 data-i18n="skills.backend">Backend</h3>
-            <p>REST APIs, client-server architecture, SQLite, JSON storage, database design</p>
-          </article>
-          <article>
-            <h3 data-i18n="skills.tools">Tools</h3>
-            <p>Git, GitHub, Linux/macOS, VS Code, Gradio, Telebot</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section-shell" id="education" aria-labelledby="education-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="education.kicker">Education</p>
-          <h2 id="education-title">Kazan Federal University</h2>
-          <p data-i18n="education.degree">B.S. in Software Engineering · 2022-2026 · Kazan, Russia</p>
-        </div>
-        <div class="education-layout">
-          <article class="thesis-card">
-            <span class="section-kicker" data-i18n="education.thesisKicker">Diploma / Thesis Project</span>
-            <h3 data-i18n="education.thesisTitle">Development of an AI Assistant for Learning Spanish Using Large Language Models</h3>
-            <p data-i18n="education.thesisCopy">
-              A full-stack educational AI system combining LLM interaction, personalized retrieval,
-              speech technologies, conversational tutoring, and learning analytics.
-            </p>
-          </article>
-          <div class="timeline" aria-label="Research focus areas">
-            <button class="timeline-item active" type="button" data-focus="llm">
-              <span>01</span>
-              <strong>Large Language Models</strong>
-              <small>Local AI inference and structured tutoring conversations.</small>
-            </button>
-            <button class="timeline-item" type="button" data-focus="rag">
-              <span>02</span>
-              <strong>RAG Personalization</strong>
-              <small>User vocabulary, progress, and contextual memory.</small>
-            </button>
-            <button class="timeline-item" type="button" data-focus="hci">
-              <span>03</span>
-              <strong>Human-AI Interaction</strong>
-              <small>Adaptive feedback for language-learning workflows.</small>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell compact" aria-labelledby="interests-title">
-        <div class="section-heading">
-          <p class="section-kicker" data-i18n="interests.kicker">Role Focus</p>
-          <h2 id="interests-title" data-i18n="interests.title">Where I can contribute now.</h2>
-        </div>
-        <div class="interest-marquee" aria-label="Research interests">
-          <span>Conversational AI</span>
-          <span>Educational AI</span>
-          <span>Language Technologies</span>
-          <span>Personalized Systems</span>
-          <span>Multilingual AI</span>
-          <span>Human-Centered AI</span>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-copy">
-          <p class="section-kicker" data-i18n="contact.kicker">Contact</p>
-          <h2 id="contact-title" data-i18n="contact.title">Let's build the next chapter.</h2>
-          <p data-i18n="contact.copy">
-            I am available for Software Engineer, AI Developer, and Python Backend opportunities where
-            I can build useful products, learn quickly, and contribute across the development lifecycle.
-          </p>
-        </div>
-        <div class="contact-panel">
-          <a href="mailto:amandaargotti@gmail.com">amandaargotti@gmail.com</a>
-          <a href="tel:+593959033244">+593 95 903 3244</a>
-          <a href="https://www.linkedin.com/in/amanda-argotti" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          <a href="https://github.com/AmyArgotti" target="_blank" rel="noreferrer">GitHub</a>
-          <div class="cv-downloads" aria-labelledby="cv-download-title">
-            <strong id="cv-download-title" data-i18n="cv.title">Download CV</strong>
-            <a href="assets/documents/Amanda_Argotti_CV_EN.pdf" download="Amanda_Argotti_CV_EN.pdf" data-i18n="cv.en">English</a>
-            <a href="assets/documents/Amanda_Argotti_CV_ES.pdf" download="Amanda_Argotti_CV_ES.pdf" data-i18n="cv.es">Español</a>
-            <a href="assets/documents/Amanda_Argotti_CV_RU.pdf" download="Amanda_Argotti_CV_RU.pdf" data-i18n="cv.ru">Русский</a>
-          </div>
-          <a
-            class="button primary full"
-            href="assets/documents/Amanda_Argotti_CV_EN.pdf"
-            download="Amanda_Argotti_CV_EN.pdf"
-            data-primary-cv
-          >
-            <span data-i18n="contact.openCv">Download English CV</span>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <dialog class="project-dialog" data-dialog>
-      <button class="dialog-close" type="button" data-dialog-close aria-label="Close project details">×</button>
-      <p class="section-kicker" data-i18n="dialog.kicker">Juanito Architecture</p>
-      <h2 data-i18n="dialog.title">AI learning assistant pipeline</h2>
-      <div class="architecture">
-        <div data-i18n="dialog.step1">Learner input</div>
-        <div data-i18n="dialog.step2">Intent routing</div>
-        <div data-i18n="dialog.step3">LLM / RAG response</div>
-        <div data-i18n="dialog.step4">Quiz, translation, or speaking practice</div>
-        <div data-i18n="dialog.step5">Progress and vocabulary storage</div>
-      </div>
-      <p data-i18n="dialog.copy">
-        The project connects a Gradio web interface and Telegram bot to Python services, SQLite storage,
-        Ollama local models, Whisper speech recognition, and personalized retrieval logic.
-      </p>
-    </dialog>
-
-    <footer>
-      <span>© 2026 Amanda Argotti</span>
-      <span>Software Engineer · AI & Python Backend</span>
-    </footer>
-
-    <script src="script.js?v=20260705-job-search-v2"></script>
-  </body>
+    </section>
+  </main>
+  <dialog class="project-dialog" data-dialog aria-labelledby="dialog-title"><button class="dialog-close" type="button" data-dialog-close data-label="close" aria-label="Close case study">×</button><div data-case-study></div></dialog>
+  <footer><span>© 2026 Amanda Argotti</span><span data-content="location">Quito, Ecuador · Open to relocation</span></footer>
+  <noscript><p class="section-shell"><a href="assets/documents/Amanda_Argotti_CV_EN.pdf">Download English CV</a> · <a href="https://github.com/AmyArgotti">GitHub</a></p></noscript>
+  <script src="content-data.js?v=20261013"></script><script src="script.js?v=20261013"></script>
+</body>
 </html>
