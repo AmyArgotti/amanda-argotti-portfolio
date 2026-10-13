@@ -148,8 +148,21 @@ window.portfolioContent = {
         "status": "Public mobile application repository.",
         "limitations": "Cloud synchronization and production usage outcomes are not claimed.",
         "cv": "Developed a Flutter expense tracker with SQLite persistence and MVVM architecture."
+      },
+      {
+        "id": "loyalty",
+        "title": "Golden Bite · Restaurant Loyalty",
+        "meta": "Freelance software project · 2026",
+        "copy": "A restaurant loyalty interface presenting a customer's tier, points balance, digital card identifier, and phone sign-in flow.",
+        "contribution": "Developed customer tracking and loyalty-point business logic with Python, SQL, and API workflows, together with the customer-facing loyalty experience.",
+        "decisions": "The customer interface brings membership tier, points, and card details into one view. Phone-based access connects the loyalty account to the sign-in flow.",
+        "status": "Customer-facing interface demonstrated in the supplied project screenshot.",
+        "limitations": "The screenshot demonstrates the interface, not production SMS delivery or Wallet integration. A public repository and live demo link have not yet been supplied.",
+        "cv": "Developed restaurant customer tracking and loyalty-point logic with Python, SQL, and APIs."
       }
     ],
+    "previewLabel": "View project screenshot",
+    "fullImage": "Open full-size screenshot",
     "research": "Conversational AI; educational technology; multilingual language learning; human–AI interaction; personalized learning.",
     "conference": "Participant, KFU international student conference “Discovering the World Together”, Kazan, 2022.",
     "thesis": "Development of an AI Assistant for Learning Spanish Using Large Language Models"
@@ -303,8 +316,21 @@ window.portfolioContent = {
         "status": "Repositorio público de aplicación móvil.",
         "limitations": "No se atribuyen sincronización en la nube ni resultados de uso en producción.",
         "cv": "Desarrollé una app Flutter de gastos con persistencia SQLite y arquitectura MVVM."
+      },
+      {
+        "id": "loyalty",
+        "title": "Golden Bite · Fidelización de Clientes",
+        "meta": "Proyecto de software freelance · 2026",
+        "copy": "Interfaz de fidelización para restaurante con nivel de membresía, saldo de puntos, identificador de tarjeta y acceso mediante teléfono.",
+        "contribution": "Desarrollé seguimiento de clientes y lógica de puntos con Python, SQL y flujos de APIs, junto con la experiencia de fidelización para clientes.",
+        "decisions": "La interfaz reúne nivel de membresía, puntos y tarjeta en una vista. El acceso por teléfono conecta la cuenta de fidelización con el inicio de sesión.",
+        "status": "Interfaz para clientes demostrada en la captura del proyecto proporcionada.",
+        "limitations": "La captura muestra la interfaz, no la entrega de SMS en producción ni la integración Wallet. Todavía no se ha proporcionado un repositorio público ni enlace de demo.",
+        "cv": "Desarrollé seguimiento de clientes y lógica de puntos para restaurante con Python, SQL y APIs."
       }
     ],
+    "previewLabel": "Ver captura del proyecto",
+    "fullImage": "Abrir captura en tamaño completo",
     "research": "IA conversacional; tecnología educativa; aprendizaje multilingüe; interacción humano–IA; aprendizaje personalizado.",
     "conference": "Participante, conferencia internacional estudiantil de KFU «Descubriendo el mundo juntos», Kazán, 2022.",
     "thesis": "Desarrollo de un asistente de IA para aprender español usando modelos de lenguaje grandes"
@@ -458,8 +484,21 @@ window.portfolioContent = {
         "status": "Публичный репозиторий мобильного приложения.",
         "limitations": "Облачная синхронизация и результаты эксплуатации не заявляются.",
         "cv": "Разработала приложение Flutter для учёта расходов с SQLite и архитектурой MVVM."
+      },
+      {
+        "id": "loyalty",
+        "title": "Golden Bite · Система лояльности",
+        "meta": "Разработка на фрилансе · 2026",
+        "copy": "Интерфейс программы лояльности ресторана: уровень участника, баланс баллов, идентификатор карты и вход по телефону.",
+        "contribution": "Разработала учёт клиентов и логику баллов с Python, SQL и API, а также клиентский интерфейс программы лояльности.",
+        "decisions": "Интерфейс объединяет уровень, баллы и данные карты. Вход по телефону связывает учётную запись программы лояльности с авторизацией.",
+        "status": "Клиентский интерфейс показан на предоставленном снимке проекта.",
+        "limitations": "Снимок демонстрирует интерфейс, а не отправку SMS в рабочей среде или интеграцию Wallet. Публичный репозиторий и ссылка на демо пока не предоставлены.",
+        "cv": "Разработала учёт клиентов и логику баллов для ресторана с Python, SQL и API."
       }
     ],
+    "previewLabel": "Посмотреть снимок проекта",
+    "fullImage": "Открыть снимок в полном размере",
     "research": "Разговорный ИИ; образовательные технологии; многоязычное обучение; взаимодействие человека и ИИ; персонализированное обучение.",
     "conference": "Участница международной студенческой конференции КФУ «Открываем мир вместе», Казань, 2022.",
     "thesis": "Разработка ИИ-ассистента для изучения испанского языка с использованием больших языковых моделей"
@@ -475,9 +514,11 @@ window.portfolioContent = {
         "Gradio",
         "Ollama",
         "JSON",
-        "TTS"
+        "TTS",
+        "Telegram"
       ],
-      "repository": "https://github.com/AmyArgotti/juanito-spanish-assistant"
+      "repository": "https://github.com/AmyArgotti/juanito-spanish-assistant",
+      "image": "assets/projects/juanito.png"
     },
     "moonlit": {
       "tags": [
@@ -520,6 +561,18 @@ window.portfolioContent = {
         "MVVM"
       ],
       "repository": "https://github.com/AmyArgotti/expense-tracker-app"
+    },
+    "loyalty": {
+      "tags": [
+        "web",
+        "backend"
+      ],
+      "stack": [
+        "Python",
+        "SQL",
+        "APIs"
+      ],
+      "image": "assets/projects/golden-bite.png"
     }
   }
 };

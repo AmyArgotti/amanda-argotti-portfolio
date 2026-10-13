@@ -32,7 +32,7 @@ try {
         await page.locator('[data-lang="' + lang + '"]').click();
         assert.equal(await page.locator('html').getAttribute('lang'), lang);
         assert.equal(await page.locator('[data-lang="' + lang + '"]').getAttribute('aria-pressed'), 'true');
-        assert.equal(await page.locator('.project-card').count(), 4);
+        assert.equal(await page.locator('.project-card').count(), 5);
         for (const theme of ['light','dark']) {
           await page.evaluate((value) => { document.documentElement.dataset.theme = value; }, theme);
           await page.locator('#projects').scrollIntoViewIfNeeded();
@@ -58,14 +58,24 @@ try {
           await page.screenshot({path:path.join(out, viewport.width + '-' + lang + '-' + theme + '.png'),fullPage:true,animations:'disabled'});
         }
         await page.locator('[data-filter="web"]').click();
-        assert.equal(await page.locator('.project-card:visible').count(), 2);
+        assert.equal(await page.locator('.project-card:visible').count(), 3);
         await page.locator('[data-filter="ai"]').click();
         assert.equal(await page.locator('.project-card:visible').count(), 1);
-        await page.locator('[data-project-open="juanito"]').click();
+        await page.locator('.project-preview-link[data-project-open="juanito"]').click();
         assert.equal(await page.locator('dialog').evaluate((node) => node.open), true);
+        assert.ok((await page.locator('.case-study-preview img').getAttribute('src')).endsWith('juanito.png'));
+        await page.locator('.case-study-preview img').evaluate((image) => image.decode());
+        await page.screenshot({path:path.join(out, viewport.width + '-' + lang + '-juanito-dialog.png'),animations:'disabled'});
         await page.keyboard.press('Escape');
         assert.equal(await page.locator('dialog').evaluate((node) => node.open), false);
         await page.locator('[data-filter="all"]').click();
+        await page.locator('.project-preview-link[data-project-open="loyalty"]').click();
+        assert.equal(await page.locator('dialog').evaluate((node) => node.open), true);
+        assert.ok((await page.locator('.case-study-preview img').getAttribute('src')).endsWith('golden-bite.png'));
+        await page.locator('.case-study-preview img').evaluate((image) => image.decode());
+        assert.equal(await page.locator('dialog a[href="undefined"]').count(), 0);
+        await page.screenshot({path:path.join(out, viewport.width + '-' + lang + '-loyalty-dialog.png'),animations:'disabled'});
+        await page.keyboard.press('Escape');
         for (const mode of ['academic','job']) {
           await page.locator('[name="cv-mode"][value="' + mode + '"]').check();
           const href = await page.locator('[data-primary-cv]').first().getAttribute('href');

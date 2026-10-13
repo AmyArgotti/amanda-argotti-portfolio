@@ -1,5 +1,6 @@
 """Generate the website content bundle and both CV editions from content.json."""
 import json
+import argparse
 from html import escape
 from pathlib import Path
 from shutil import copyfile
@@ -89,6 +90,9 @@ def build(lang, data, links, academic=False):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--content-only", action="store_true", help="Refresh website content without regenerating PDFs")
+    args = parser.parse_args()
     pdfmetrics.registerFont(TTFont("CV", "/System/Library/Fonts/Supplemental/Arial.ttf"))
     pdfmetrics.registerFont(TTFont("CVBold", "/System/Library/Fonts/Supplemental/Arial Bold.ttf"))
     pdfmetrics.registerFontFamily("CV", normal="CV", bold="CVBold")
@@ -96,6 +100,8 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     # A script bundle also works when the static website is opened via file://.
     (ROOT / "content-data.js").write_text("window.portfolioContent = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n")
+    if args.content_only:
+        return
     for lang in ("en", "es", "ru"):
         for academic in (False, True):
             print(build(lang, data[lang], data["projectLinks"], academic))
